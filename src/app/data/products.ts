@@ -146,7 +146,7 @@ export const categories = [
   {
     id: "lip-care",
     name: "العناية بالشفاه",
-    nameEn: "Lip Care",
+    nameEn: "",
     image: "https://i.pinimg.com/1200x/55/84/e7/5584e71cf580f87dc4b43c0deac89f09.jpg",
     description: "اكتشفي مجموعتنا الفاخرة للعناية بالشفاه المصنوعة من أجود المكونات الطبيعية",
     count: 6,
@@ -154,7 +154,7 @@ export const categories = [
   {
     id: "lip-glosses",
     name: "غلوس الشفاه",
-    nameEn: "Lip Glosses",
+    nameEn: "",
     image: "https://i.pinimg.com/1200x/ff/8f/cc/ff8fcc75bbc12f2d8875eb37c496fd18.jpg",
     description: "تألقي بأجمل ألوان الغلوس اللامعة المختارة بعناية لتناسب جمالك العربي",
     count: 6,

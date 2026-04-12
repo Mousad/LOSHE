@@ -384,7 +384,7 @@ export function Home() {
                 <img
                   src="https://i.pinimg.com/736x/f2/d4/6f/f2d46f639797a1a39f6aee125b72bb8e.jpg"
                   alt="about glowray"
-                  className="w-full h-[20] object-cover"
+                  className="w-full h-full object-cover"
                 />
               </div>
               
