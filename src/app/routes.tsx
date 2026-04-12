@@ -9,6 +9,7 @@ import { Cart } from "./pages/Cart";
 import { Checkout } from "./pages/Checkout";
 import { About } from "./pages/About";
 
+
 function Root() {
   return (
     <div className="min-h-screen flex flex-col">
@@ -16,6 +17,7 @@ function Root() {
       <main className="flex-1">
         <Outlet />
       </main>
+      
       <Footer />
     </div>
   );

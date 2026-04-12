@@ -4,6 +4,7 @@ import { ChevronLeft, ChevronRight, ArrowLeft, Instagram, MessageCircle, MapPin,
 import { MovingInfoBar } from "../components/MovingInfoBar";
 import { ProductCard } from "../components/ProductCard";
 import { categories, bestSellers, allProducts } from "../data/products";
+import BeforeAfter from "../components/BeforeAfter";
 
 const heroSlides = [
   {
@@ -82,14 +83,14 @@ export function Home() {
           >
            
             <h1
-              className="text-white mb-4 leading-tight"
+              className="text-white mb-4 leading-tight "
               style={{ fontSize: "clamp(2rem, 5vw, 3.8rem)", fontWeight: 800, lineHeight: 1.2 }}
             >
               جمالك يبدأ من
               <span
                 className="block">
                
-                Glowray 
+                LOSHE 
               </span>
             </h1>
             <p
@@ -236,6 +237,8 @@ export function Home() {
         </div>
       </section>
 
+      
+
       {/* Product Strip */}
       <section className="py-10 px-4">
         <div className="max-w-7xl mx-auto">
@@ -258,6 +261,7 @@ export function Home() {
           </div>
         </div>
       </section>
+      <BeforeAfter />
 
       {/* Social Media Section */}
       <section className="py-11 px-4 bg- from-purple-50 to-pink-50">
@@ -267,7 +271,7 @@ export function Home() {
             className="text-gray-800 mb-3"
             style={{ fontSize: "clamp(1.4rem, 3.5vw, 2rem)", fontWeight: 800 }}
           >
-            كوني جزءاً من مجتمع Glowray
+            كوني جزءاً من مجتمع LOSHE
           </h2>
           <p className="text-gray-500 text-sm mb-8 max-w-sm mx-auto">
             شاركينا إطلالتك واحصلي على فرصة الظهور في صفحتنا 
@@ -348,10 +352,10 @@ export function Home() {
                 className="text-gray-800 mb-4 leading-tight"
                 style={{ fontSize: "clamp(1.6rem, 4vw, 2.2rem)", fontWeight: 800 }}
               >
-                نحن Glowray <br />جمالك مهمتنا
+                نحن LOSHE <br />جمالك مهمتنا
               </h2>
               <p className="text-gray-500 leading-relaxed mb-4 text-sm">
-                أُسِّس متجر Glowray بشغف حقيقي لتزويد المرأة العربية بأفضل منتجات التجميل العالمية بأسعار مناسبة وخدمة توصيل سريعة.
+                أُسِّس متجر LOSHE بشغف حقيقي لتزويد المرأة العربية بأفضل منتجات التجميل العالمية بأسعار مناسبة وخدمة توصيل سريعة.
               </p>
               <p className="text-gray-500 leading-relaxed mb-6 text-sm">
                 نحن نؤمن أن كل امرأة تستحق أن تشعر بجمالها كل يوم. لهذا نختار منتجاتنا بعناية فائقة لتضمن لكِ أعلى جودة.

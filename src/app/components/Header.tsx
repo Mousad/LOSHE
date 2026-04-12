@@ -49,17 +49,14 @@ export function Header() {
           >
             
             <span
-              className="text-2xl tracking-wide"
+              className="text-2xl tracking-wide text-[#f15b9a]"
               style={{
                 fontFamily: "'Cairo', sans-serif",
                 fontWeight: 800,
-                background: "linear-gradient(135deg, #EC4899, #A855F7, #D4A853)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
+                
               }}
             >
-              Glowray
+              LOSHE
             </span>
           </Link>
 

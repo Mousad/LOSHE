@@ -30,7 +30,7 @@ export function About() {
             className="text-[#056d05]  mb-3"
             style={{ fontSize: "clamp(2rem, 5vw, 3rem)", fontWeight: 800 }}
           >
-            قصة Glowray 
+            قصة LOSHE 
           </h1>
           <p className="text-white/75 text-sm max-w-md">
             شغفنا بالجمال جعلنا نبني أفضل متجر لمستحضرات التجميل في المملكة
@@ -139,7 +139,7 @@ export function About() {
                 style={{ background: "linear-gradient(135deg, #E1306C, #833AB4, #F77737)" }}>
                 <Instagram size={24} />
               </div>
-              <span className="text-sm text-gray-500">@glowray.sa</span>
+              <span className="text-sm text-gray-500">@LOSHE.sa</span>
             </a>
             <a
               href="#"
@@ -148,7 +148,7 @@ export function About() {
               <div className="w-14 h-14 rounded-2xl bg-black flex items-center justify-center text-white transition-all group-hover:scale-110 group-hover:shadow-lg">
                 <TikTokIcon />
               </div>
-              <span className="text-sm text-gray-500">@glowray</span>
+              <span className="text-sm text-gray-500">@LOSHE</span>
             </a>
             <a
               href="#"

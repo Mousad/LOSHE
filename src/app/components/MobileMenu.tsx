@@ -53,17 +53,14 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           <div className="flex items-center gap-2">
             
             <span
-              className="text-xl"
+              className="text-xl text-[#f15b9a]"
               style={{
                 fontFamily: "'Cairo', sans-serif",
                 fontWeight: 800,
-                background: "linear-gradient(135deg, #EC4899, #A855F7)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
+                
               }}
             >
-              Glowray
+              LOSHE
             </span>
           </div>
           <button
