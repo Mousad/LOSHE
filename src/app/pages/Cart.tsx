@@ -51,7 +51,7 @@ export function Cart() {
             className="text-gray-800"
             style={{ fontSize: "1.6rem", fontWeight: 800 }}
           >
-            سلة التسوق 🛍️
+            سلة  
           </h1>
           <span className="bg-pink-100 text-pink-600 text-sm font-semibold px-2.5 py-0.5 rounded-full">
             {totalItems} منتج
@@ -80,54 +80,75 @@ export function Cart() {
 
                 {/* Info */}
                 <div className="flex-1 min-w-0">
-                  <Link to={`/product/${item.id}`}>
-                    <h3 className="text-gray-800 font-semibold text-sm mb-1 line-clamp-2 hover:text-pink-500 transition-colors">
-                      {item.name}
-                    </h3>
-                  </Link>
-                  <p className="text-gray-400 text-xs mb-3">{item.category}</p>
-                  <div className="flex items-center justify-between">
-                    {/* Quantity */}
-                    <div className="flex items-center gap-0 border border-pink-200 rounded-xl overflow-hidden">
-                      <button
-                        onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                        className="w-8 h-8 flex items-center justify-center text-pink-500 hover:bg-pink-50 transition-colors"
-                      >
-                        <Minus size={13} />
-                      </button>
-                      <span className="w-8 h-8 flex items-center justify-center font-semibold text-gray-700 text-sm">
-                        {item.quantity}
-                      </span>
-                      <button
-                        onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                        className="w-8 h-8 flex items-center justify-center text-pink-500 hover:bg-pink-50 transition-colors"
-                      >
-                        <Plus size={13} />
-                      </button>
-                    </div>
-                    {/* Price */}
-                    <span
-                      className="font-bold"
-                      style={{
-                        background: "linear-gradient(135deg, #EC4899, #A855F7)",
-                        WebkitBackgroundClip: "text",
-                        WebkitTextFillColor: "transparent",
-                        backgroundClip: "text",
-                        fontSize: "1rem",
-                      }}
-                    >
-                      {item.price * item.quantity} ر.س
-                    </span>
-                  </div>
-                </div>
+  <Link to={`/product/${item.id}`}>
+    <h3 className="text-gray-800 font-semibold text-sm mb-1 line-clamp-2 hover:text-pink-500 transition-colors">
+      {item.name}
+    </h3>
+  </Link>
+
+  <p className="text-gray-400 text-xs mb-3">{item.category}</p>
+
+  <div className="flex items-center justify-between">
+    {/* Quantity */}
+    <div className="flex items-center gap-0 border border-pink-200 rounded-xl overflow-hidden">
+      <button
+        onClick={() => updateQuantity(item.id, item.quantity - 1)}
+        className="w-8 h-8 flex items-center justify-center text-pink-500 hover:bg-pink-50 transition-colors"
+      >
+        <Minus size={13} />
+      </button>
+
+      <span className="w-8 h-8 flex items-center justify-center font-semibold text-gray-700 text-sm">
+        {item.quantity}
+      </span>
+
+      <button
+        onClick={() => updateQuantity(item.id, item.quantity + 1)}
+        className="w-8 h-8 flex items-center justify-center text-pink-500 hover:bg-pink-50 transition-colors"
+      >
+        <Plus size={13} />
+      </button>
+    </div>
+  </div>
+</div>
+
+{/* Right side (Delete + Price centered) */}
+<div className="shrink-0 flex flex-col items-center justify-between self-stretch py-1 ml-2">
+  
+  {/* Delete */}
+  <button
+    onClick={() => removeFromCart(item.id)}
+    className="p-2 rounded-xl text-gray-300 hover:text-red-400 hover:bg-red-50 transition-all"
+  >
+    <Trash2 size={16} />
+  </button>
+
+  {/* Spacer */}
+  <div className="flex-1" />
+
+  {/* Price */}
+  <div className="flex flex-col items-center leading-tight">
+    <span
+      className="font-bold text-sm"
+      style={{
+        background: "linear-gradient(135deg, #EC4899, #A855F7)",
+        WebkitBackgroundClip: "text",
+        WebkitTextFillColor: "transparent",
+        backgroundClip: "text",
+      }}
+    >
+      {item.price * item.quantity}
+    </span>
+
+    <span className="text-[10px] text-gray-400 mt-0.5">
+      ج . م
+    </span>
+  </div>
+
+</div>
 
                 {/* Delete */}
-                <button
-                  onClick={() => removeFromCart(item.id)}
-                  className="shrink-0 p-2 rounded-xl text-gray-300 hover:text-red-400 hover:bg-red-50 transition-all self-start"
-                >
-                  <Trash2 size={16} />
-                </button>
+              
               </div>
             ))}
           </div>
@@ -148,11 +169,11 @@ export function Cart() {
               <div className="space-y-3 mb-5">
                 <div className="flex justify-between text-sm">
                   <span className="text-gray-500">المنتجات ({totalItems})</span>
-                  <span className="text-gray-700 font-medium">{totalPrice} ر.س</span>
+                  <span className="text-gray-700 font-medium">{totalPrice} ج.م</span>
                 </div>
                 <div className="flex justify-between text-sm">
                   <span className="text-gray-500">الشحن</span>
-                  <span className="text-green-500 font-medium">مجاني 🎁</span>
+                  <span className="text-green-500 font-medium">مجاني </span>
                 </div>
                 <div className="border-t border-pink-100 pt-3 flex justify-between">
                   <span className="text-gray-700 font-semibold">الإجمالي</span>
@@ -165,7 +186,7 @@ export function Cart() {
                       backgroundClip: "text",
                     }}
                   >
-                    {totalPrice} ر.س
+                    {totalPrice} ج.م
                   </span>
                 </div>
               </div>

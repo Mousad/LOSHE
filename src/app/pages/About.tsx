@@ -12,9 +12,9 @@ export function About() {
   return (
     <div className="bg-[#FFFBF7] min-h-screen pb-16">
       {/* Hero Banner */}
-      <div className="relative h-72 md:h-96 overflow-hidden">
+      <div className="relative h-62 md:h-96 overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1658492055212-e1acbccfca5a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1200"
+          src="https://i.pinimg.com/736x/f2/d4/6f/f2d46f639797a1a39f6aee125b72bb8e.jpg"
           alt="about"
           className="w-full h-full object-cover"
         />

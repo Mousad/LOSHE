@@ -179,15 +179,22 @@ export function Home() {
           </div>
 
           {/* Horizontal Scroll */}
-          <div className="overflow-x-auto scrollbar-hide pb-4">
-            <div className="flex gap-5" style={{ minWidth: "max-content" }}>
-              {bestSellers.map((product) => (
-                <div key={product.id} className="w-52 md:w-60 shrink-0">
-                  <ProductCard product={product} />
-                </div>
-              ))}
-            </div>
-          </div>
+         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pb-4">
+  {bestSellers.slice(0, 4).map((product) => (
+    <div key={product.id} className="w-full">
+      <ProductCard product={product} />
+    </div>
+  ))}
+
+  {/* الخامسة في النص */}
+  {bestSellers[4] && (
+    <div className="col-span-2 md:col-span-4 flex justify-center">
+      <div className="w-42 md:w-60">
+        <ProductCard product={bestSellers[4]} />
+      </div>
+    </div>
+  )}
+</div>
         </div>
       </section>
 
@@ -241,7 +248,7 @@ export function Home() {
             </h2>
           </div>
           <div className="overflow-x-auto scrollbar-hide pb-4">
-            <div className="flex gap-5" style={{ minWidth: "max-content" }}>
+            <div className="flex gap-2 " style={{ minWidth: "max-content" }}>
               {allProducts.slice(0, 8).map((product) => (
                 <div key={product.id} className="w-44 md:w-52 shrink-0">
                   <ProductCard product={product} />
@@ -253,7 +260,7 @@ export function Home() {
       </section>
 
       {/* Social Media Section */}
-      <section className="py-16 px-4 bg- from-purple-50 to-pink-50">
+      <section className="py-11 px-4 bg- from-purple-50 to-pink-50">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-pink-500 text-sm font-semibold tracking-widest mb-2">تابعينا</p>
           <h2
@@ -297,9 +304,42 @@ export function Home() {
           </div>
         </div>
       </section>
+      <section className="py-8 px-4">
+  <div className="max-w-7xl mx-auto">
+    
+    <div className="grid grid-cols-4 gap-3">
+      
+      <img
+        src="https://i.pinimg.com/736x/f6/53/b0/f653b0aca20e0e0e1f51b5a24eaf34cf.jpg"
+        alt="image 1"
+        className="w-full h-24 md:h-32 object-cover rounded-xl"
+      />
+
+      <img
+        src="https://i.pinimg.com/736x/1c/3f/67/1c3f673a9305231b70888fa6650a0d0b.jpg"
+        alt="image 2"
+        className="w-full h-24 md:h-32 object-cover rounded-xl"
+      />
+
+      <img
+        src="https://i.pinimg.com/1200x/3b/f3/d5/3bf3d5a67466775546487e736b2c5833.jpg"
+        alt="image 3"
+        className="w-full h-24 md:h-32 object-cover rounded-xl"
+      />
+
+      <img
+        src="https://i.pinimg.com/736x/11/47/49/11474928e8fa11e9e91ed88a22a77a08.jpg"
+        alt="image 4"
+        className="w-full h-24 md:h-32 object-cover rounded-xl"
+      />
+
+    </div>
+
+  </div>
+</section>
 
       {/* About Store Section */}
-      <section className="py-16 px-4">
+      <section className="py-11 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div className="order-2 md:order-1">
@@ -342,90 +382,26 @@ export function Home() {
             <div className="order-1 md:order-2 relative">
               <div className="rounded-3xl overflow-hidden aspect-[4/5] shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1680789527271-f1fc1528f27e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800"
+                  src="https://i.pinimg.com/736x/f2/d4/6f/f2d46f639797a1a39f6aee125b72bb8e.jpg"
                   alt="about glowray"
-                  className="w-full h-full object-cover"
+                  className="w-full h-[20] object-cover"
                 />
               </div>
-              <div
-                className="absolute -bottom-4 -right-4 w-24 h-24 rounded-2xl bg-white shadow-xl flex flex-col items-center justify-center border border-pink-100"
-              >
-                <div className="flex">
-                  {[1, 2, 3, 4, 5].map((s) => (
-                    <Star key={s} size={12} className="text-yellow-400 fill-yellow-400" />
-                  ))}
-                </div>
-                <p className="text-gray-700 font-bold mt-1">4.9</p>
-                <p className="text-gray-400 text-xs">تقييمنا</p>
-              </div>
+              
             </div>
           </div>
         </div>
       </section>
 
       {/* Map Section */}
-      <section className="py-10 px-4 bg-pink-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-8">
-            <p className="text-pink-500 text-sm font-semibold tracking-widest mb-1">موقعنا</p>
-            <h2
-              className="text-gray-800"
-              style={{ fontSize: "clamp(1.3rem, 3vw, 1.8rem)", fontWeight: 800 }}
-            >
-              زوريني 📍 القاهرة
-            </h2>
-          </div>
-          <div
-            className="rounded-3xl overflow-hidden bg-white shadow-xl"
-            style={{ height: 280 }}
-          >
-            {/* Map UI Placeholder */}
-            <div
-              className="w-full h-full relative flex items-center justify-center"
-              style={{
-                background: "linear-gradient(135deg, #FFF1F5 0%, #F3E8FF 100%)",
-              }}
-            >
-              {/* Grid Lines */}
-              <div className="absolute inset-0 opacity-20">
-                {[...Array(8)].map((_, i) => (
-                  <div
-                    key={`h-${i}`}
-                    className="absolute w-full border-t border-pink-300"
-                    style={{ top: `${(i + 1) * 12.5}%` }}
-                  />
-                ))}
-                {[...Array(10)].map((_, i) => (
-                  <div
-                    key={`v-${i}`}
-                    className="absolute h-full border-r border-pink-300"
-                    style={{ right: `${(i + 1) * 10}%` }}
-                  />
-                ))}
-              </div>
-              {/* Road simulation */}
-              <div className="absolute inset-0 flex items-center justify-center opacity-30">
-                <div className="w-full h-8 bg-pink-300/40 absolute" style={{ top: "40%" }} />
-                <div className="h-full w-8 bg-pink-300/40 absolute" style={{ right: "30%" }} />
-              </div>
-              {/* Pin */}
-              <div className="relative z-10 flex flex-col items-center">
-                <div
-                  className="w-14 h-14 rounded-full flex items-center justify-center shadow-xl mb-2"
-                  style={{ background: "linear-gradient(135deg, #EC4899, #A855F7)" }}
-                >
-                  <MapPin size={24} className="text-white" />
-                </div>
-                <div className="bg-white rounded-2xl px-5 py-3 shadow-lg text-center border border-pink-100">
-                  <p className="font-bold text-gray-800">متجر Glowray</p>
-                  <p className="text-gray-500 text-sm">مصر</p>
-                  <p className="text-pink-500 text-xs mt-1">📞 +20 00 000 0000</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <div className="rounded-3xl overflow-hidden bg-white shadow-xl h-[180px]">
+  <iframe
+    title="Glowray Location"
+    src="https://www.google.com/maps?q=Cairo,Egypt&output=embed"
+    className="w-full h-full border-0"
+    loading="lazy"
+  />
+</div>
     </div>
   );
 }

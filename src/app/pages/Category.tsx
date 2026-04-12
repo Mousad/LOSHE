@@ -37,13 +37,7 @@ export function Category() {
           }}
         />
         <div className="absolute inset-0 flex flex-col items-start justify-end p-6 md:p-12 max-w-7xl mx-auto">
-          <Link
-            to="/"
-            className="flex items-center gap-1.5 text-white/70 text-sm mb-4 hover:text-white transition-colors"
-          >
-            <ArrowLeft size={14} />
-            الرئيسية
-          </Link>
+          
           
           <h1
             className="text-white mb-2"
@@ -57,18 +51,7 @@ export function Category() {
 
       {/* Products */}
       <div className="max-w-7xl mx-auto px-4 pt-12">
-        <div className="flex items-center justify-between mb-8">
-          
-          <div className="flex items-center gap-2">
-            <span className="text-gray-400 text-sm">ترتيب حسب:</span>
-            <select className="text-sm border border-pink-200 rounded-xl px-3 py-1.5 text-gray-600 focus:outline-none focus:border-pink-400 bg-white">
-              <option>الأكثر مبيعاً</option>
-              <option>السعر: من الأقل</option>
-              <option>السعر: من الأعلى</option>
-              <option>الأحدث</option>
-            </select>
-          </div>
-        </div>
+       
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
           {products.map((product) => (
@@ -87,23 +70,38 @@ export function Category() {
 
       {/* Other Category CTA */}
       <div className="max-w-7xl mx-auto px-4 pt-14">
-        <div
-          className="rounded-3xl p-8 text-center"
-          style={{ background: "linear-gradient(135deg, #FFF1F5, #F3E8FF)" }}
-        >
-          <p className="text-gray-600 mb-4">
-            {id === "lip-care" ? "هل تبحثين عن غلوس الشفاه؟" : "هل تبحثين عن منتجات العناية بالشفاه؟"}
-          </p>
-          <Link
-            to={id === "lip-care" ? "/category/lip-glosses" : "/category/lip-care"}
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl text-white font-semibold transition-all hover:scale-105"
-            style={{ background: "linear-gradient(135deg, #EC4899, #A855F7)" }}
-          >
-            <ShoppingCart size={16} />
-            {id === "lip-care" ? "اكتشفي غلوس الشفاه" : "اكتشفي العناية بالشفاه"}
-          </Link>
-        </div>
-      </div>
+  <div className="rounded-3xl overflow-hidden relative">
+
+    {/* الصورة */}
+    <img
+      src="https://i.pinimg.com/736x/61/c0/8a/61c08a8899c55fab6d19633d52221633.jpg"
+      alt="Lip Care Banner"
+      className="w-full h-54 md:h-80 object-cover"
+    />
+
+    {/* Overlay */}
+    <div className="absolute inset-0 bg-black/30 flex flex-col items-center justify-center text-center p-6">
+      
+      <p className="text-white mb-4 text-lg md:text-xl font-medium">
+        {id === "lip-care"
+          ? "هل تبحثين عن غلوس الشفاه؟"
+          : "هل تبحثين عن منتجات العناية بالشفاه؟"}
+      </p>
+
+      <Link
+        to={id === "lip-care" ? "/category/lip-glosses" : "/category/lip-care"}
+        className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl text-white font-semibold transition-all hover:scale-105"
+        style={{ background: "linear-gradient(135deg, #EC4899, #A855F7)" }}
+      >
+        <ShoppingCart size={16} />
+        {id === "lip-care"
+          ? "اكتشفي قلوس الشفاه"
+          : "اكتشفي العناية بالشفاه"}
+      </Link>
+
+    </div>
+  </div>
+</div>
     </div>
   );
 }

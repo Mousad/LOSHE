@@ -126,7 +126,7 @@ export function ProductDetails() {
               >
                 {product.price} ج م
               </span>
-              <span className="text-gray-400 line-through text-sm">{Math.round(product.price * 1.2)} مصري</span>
+              <span className="text-gray-400 line-through text-sm">{Math.round(product.price * 1.2)} ج.م</span>
               <span className="bg-green-100 text-green-600 text-xs font-semibold px-2 py-1 rounded-lg">وفري 20%</span>
             </div>
 
@@ -215,7 +215,7 @@ export function ProductDetails() {
               className="text-gray-800 mb-6"
               style={{ fontSize: "clamp(1.2rem, 3vw, 1.6rem)", fontWeight: 800 }}
             >
-              منتجات مشابهة ✨
+              منتجات مشابهة 
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
               {related.map((p) => (

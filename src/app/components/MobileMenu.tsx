@@ -99,29 +99,32 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
 
 
           
-          <div className="grid grid-cols-2 gap-3">
-            {featuredProducts.map((product) => (
-              <Link
-                key={product.id}
-                to={`/product/${product.id}`}
-                onClick={onClose}
-                className="group"
-              >
-                <div className="rounded-2xl overflow-hidden h-22 bg-pink-50 aspect-square relative">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <p className="text- text-gray-600 text-center mt- truncate">{product.name}</p>
-              </Link>
-            ))}
-          </div>
+          <div className="flex gap-3 overflow-x-auto px-2 scrollbar-hide">
+  {featuredProducts.map((product) => (
+    <Link
+      key={product.id}
+      to={`/product/${product.id}`}
+      onClick={onClose}
+      className="flex-shrink-0 w-40 group"
+    >
+      <div className="rounded-2xl overflow-hidden w-full aspect-square bg-pink-50 relative">
+        <img
+          src={product.image}
+          alt={product.name}
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+        />
+      </div>
+
+      <p className="text-gray-600 text-center mt-2 w-full truncate">
+        {product.name}
+      </p>
+    </Link>
+  ))}
+</div>
         </div>
 
         {/* Spacer */}
-       <div className="flex-1" /> 
+       <div className="h-11" /> 
 
         {/* Social Icons */}
         <div className="border-t border-pink-100 ">
@@ -146,7 +149,6 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               <MessageCircle size={18} />
             </a>
           </div>
-          <p className="text-center text-xs text-gray-400 mt-3">© 2025 Glowray. جميع الحقوق محفوظة</p>
         </div>
       </div>
     </div>
