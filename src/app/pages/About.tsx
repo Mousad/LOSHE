@@ -14,7 +14,7 @@ export function About() {
       {/* Hero Banner */}
       <div className="relative h-62 md:h-96 overflow-hidden">
         <img
-          src="https://i.pinimg.com/736x/f2/d4/6f/f2d46f639797a1a39f6aee125b72bb8e.jpg"
+          src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR6HwEg-mZXV-ixSPnWjiCaJt4BgBcLGrlhsbYjb0DaQ4Fx0Lqb"
           alt="about"
           className="w-full h-full object-cover"
         />
@@ -30,7 +30,7 @@ export function About() {
             className="text-[#056d05]  mb-3"
             style={{ fontSize: "clamp(2rem, 5vw, 3rem)", fontWeight: 800 }}
           >
-            قصة LOSHE 
+            قصة Glee Beauty 
           </h1>
           <p className="text-white/75 text-sm max-w-md">
             شغفنا بالجمال جعلنا نبني أفضل متجر لمستحضرات التجميل في المملكة
@@ -49,7 +49,7 @@ export function About() {
             نؤمن بجمال كل امرأة
           </h2>
           <p className="text-gray-500 max-w-2xl mx-auto leading-relaxed text-sm">
-            في Glowray، نؤمن أن الجمال ليس قناعاً بل هو تعبير عن الثقة والأصالة.
+            في Glee Beauty نؤمن أن الجمال ليس قناعاً بل هو تعبير عن الثقة والأصالة.
             لهذا نختار منتجاتنا بعناية فائقة من أجود العلامات التجارية العالمية لتناسب
             جمال المرأة العربية وتعكس شخصيتها المميزة.
           </p>
@@ -139,7 +139,7 @@ export function About() {
                 style={{ background: "linear-gradient(135deg, #E1306C, #833AB4, #F77737)" }}>
                 <Instagram size={24} />
               </div>
-              <span className="text-sm text-gray-500">@LOSHE.sa</span>
+              <span className="text-sm text-gray-500">@Beauty.sa</span>
             </a>
             <a
               href="#"
@@ -148,7 +148,7 @@ export function About() {
               <div className="w-14 h-14 rounded-2xl bg-black flex items-center justify-center text-white transition-all group-hover:scale-110 group-hover:shadow-lg">
                 <TikTokIcon />
               </div>
-              <span className="text-sm text-gray-500">@LOSHE</span>
+              <span className="text-sm text-gray-500">@Beauty.sa</span>
             </a>
             <a
               href="#"

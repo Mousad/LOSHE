@@ -28,7 +28,7 @@ export function Footer() {
                   backgroundClip: "text",
                 }}
               >
-                LOSHE
+                Glee Beauty
               </span>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
@@ -88,7 +88,7 @@ export function Footer() {
         {/* Divider */}
         <div className="border-t border-white/10 pt-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-gray-500">
-            <p>© 2025 LOSHE. جميع الحقوق محفوظة</p>
+            <p>© 2026 Glee Beauty. جميع الحقوق محفوظة</p>
             <div className="flex gap-4">
               <a href="#" className="hover:text-pink-400 transition-colors">سياسة الخصوصية</a>
               <a href="#" className="hover:text-pink-400 transition-colors">الشروط والأحكام</a>

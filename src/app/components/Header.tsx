@@ -56,7 +56,7 @@ export function Header() {
                 
               }}
             >
-              LOSHE
+              Glee Beauty
             </span>
           </Link>
 

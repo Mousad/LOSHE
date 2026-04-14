@@ -90,7 +90,7 @@ export function Home() {
               <span
                 className="block">
                
-                LOSHE 
+                Glee Beauty 
               </span>
             </h1>
             <p
@@ -352,7 +352,7 @@ export function Home() {
                 className="text-gray-800 mb-4 leading-tight"
                 style={{ fontSize: "clamp(1.6rem, 4vw, 2.2rem)", fontWeight: 800 }}
               >
-                نحن LOSHE <br />جمالك مهمتنا
+                نحن Glee Beauty <br />جمالك مهمتنا
               </h2>
               <p className="text-gray-500 leading-relaxed mb-4 text-sm">
                 أُسِّس متجر LOSHE بشغف حقيقي لتزويد المرأة العربية بأفضل منتجات التجميل العالمية بأسعار مناسبة وخدمة توصيل سريعة.
@@ -386,7 +386,7 @@ export function Home() {
             <div className="order-1 md:order-2 relative">
               <div className="rounded-3xl overflow-hidden aspect-[4/5] shadow-2xl">
                 <img
-                  src="https://i.pinimg.com/736x/f2/d4/6f/f2d46f639797a1a39f6aee125b72bb8e.jpg"
+                  src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR6HwEg-mZXV-ixSPnWjiCaJt4BgBcLGrlhsbYjb0DaQ4Fx0Lqb"
                   alt="about glowray"
                   className="w-full h-full object-cover"
                 />

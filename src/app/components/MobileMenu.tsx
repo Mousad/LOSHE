@@ -60,7 +60,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                 
               }}
             >
-              LOSHE
+              Glee Beauty
             </span>
           </div>
           <button
